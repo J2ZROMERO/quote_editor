@@ -4,6 +4,9 @@ en:
     placeholders:
       quote:
         name: Name of your quote
+      other:
+        name: Name of your quote
+
     labels:
       quote:
         name: Name
