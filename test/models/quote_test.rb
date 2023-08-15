@@ -1,7 +1,12 @@
-require "test_helper"
+# test/system/quotes_test.rb
 
-class QuoteTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+require "application_system_test_case"
+
+class QuotesTest < ApplicationSystemTestCase
+  setup do
+    login_as users(:accountant)
+    @quote = Quote.ordered.first
+  end
+
+  # All the previous code
 end
