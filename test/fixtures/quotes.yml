@@ -1,13 +1,13 @@
 # test/fixtures/quotes.yml
 
 first:
-  company: kpmg
+  company: one
   name: First quote
 
 second:
-  company: kpmg
+  company: one
   name: Second quote
 
 third:
-  company: kpmg
+  company: one
   name: Third quote
