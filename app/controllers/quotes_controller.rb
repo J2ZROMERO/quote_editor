@@ -3,7 +3,7 @@ class QuotesController < ApplicationController
 
 
     def index
-      @quotes = current_company.quotes.order(created_at: :desc)
+      @quotes = current_company.quotes.ordered
     end
 
   def show
