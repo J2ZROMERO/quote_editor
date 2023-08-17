@@ -20,7 +20,8 @@ def create
 
   if @quote.save
     respond_to do |format|
-      format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
+      flash[:notice] = "Quote was successfully created."
+      redirect_to quotes_path
       format.turbo_stream
     end
   else
@@ -43,7 +44,8 @@ end
   @quote.destroy
 
   respond_to do |format|
-    format.html { redirect_to quotes_path, notice: "Quote was successfully destroyed." }
+    flash[:notice] = "Quote was successfully Destroyed."
+    redirect_to quotes_path
     format.turbo_stream
   end
 end
