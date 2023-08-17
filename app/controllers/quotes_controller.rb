@@ -14,30 +14,32 @@ class QuotesController < ApplicationController
   end
 
   
-def create
-  # Only this first line changes to make sure the association is created
-  @quote = current_company.quotes.build(quote_params)
 
-  if @quote.save
-    respond_to do |format|
-      flash[:notice] = "Quote was successfully created."
-      redirect_to quotes_path
-      format.turbo_stream
+  def create
+    @quote = current_company.quotes.build(quote_params)
+  
+    if @quote.save
+      respond_to do |format|
+        format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Quote was successfully created." }
+      end
+    else
+      render :new
     end
-  else
-    render :new
   end
-end
 
+  
   def edit
   end
 
   def update
     if @quote.update(quote_params)
-      flash[:notice] = "Quote was successfully updated."
-      redirect_to quotes_path
+      respond_to do |format|
+        format.html { redirect_to quotes_path, notice: "Quote was successfully updated." }
+        format.turbo_stream { flash.now[:notice] = "Quote was successfully updated." }
+      end
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
