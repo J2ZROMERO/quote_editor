@@ -44,14 +44,13 @@ class QuotesController < ApplicationController
   end
 
   def destroy
-  @quote.destroy
-
-  respond_to do |format|
-    flash[:notice] = "Quote was successfully Destroyed."
-    redirect_to quotes_path
-    format.turbo_stream
+    @quote.destroy
+  
+    respond_to do |format|
+      format.html { redirect_to quotes_path, notice: "Quote was successfully destroyed." }
+      format.turbo_stream { flash.now[:notice] = "Quote was successfully destroyed." }
+    end
   end
-end
 
   private
 
