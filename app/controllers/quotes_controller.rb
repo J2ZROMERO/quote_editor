@@ -34,7 +34,8 @@ end
 
   def update
     if @quote.update(quote_params)
-      redirect_to quotes_path, notice: "Quote was successfully updated."
+      flash[:notice] = "Quote was successfully updated."
+      redirect_to quotes_path
     else
       render :edit
     end

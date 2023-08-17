@@ -49,7 +49,7 @@ gem "orm_adapter", " ~> 0.5.0"
 
 gem "devise", "~> 4.8.1"
 
-
+gem 'pry-rails', :group => :development
 gem "simple_form", "~> 5.1.0"
 
 # Use Sass to process CSS
