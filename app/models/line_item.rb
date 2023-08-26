@@ -1,8 +1,5 @@
-
 class LineItem < ApplicationRecord
   belongs_to :line_item_date
-  has_many :line_items, dependent: :destroy
-
 
   validates :name, presence: true
   validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
