@@ -19,22 +19,29 @@ class LineItemsController < ApplicationController
         render :new, status: :unprocessable_entity
       end
     end
-    
+
     def edit
     end
   
     def update
-      if @line_item.update(line_item_params)
-        redirect_to quote_path(@quote), notice: "Item was successfully updated."
-      else
-        render :edit, status: :unprocessable_entity
-      end
+  if @line_item.update(line_item_params)
+    respond_to do |format|
+      format.html { redirect_to quote_path(@quote), notice: "Item was successfully updated." }
+      format.turbo_stream { flash.now[:notice] = "Item was successfully updated." }
     end
+  else
+    render :edit, status: :unprocessable_entity
+  end
+end
   
-    def destroy
-        @line_item.destroy
-        redirect_to quote_path(@quote), notice: "Item was successfully destroyed."
-      end
+def destroy
+  @line_item.destroy
+
+  respond_to do |format|
+    format.html { redirect_to quote_path(@quote), notice: "Date was successfully destroyed." }
+    format.turbo_stream { flash.now[:notice] = "Date was successfully destroyed." }
+  end
+end
     
     private
   
