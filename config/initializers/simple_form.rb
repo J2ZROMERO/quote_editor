@@ -13,6 +13,8 @@ SimpleForm.setup do |config|
     b.use :html5
     b.use :placeholder
     b.use :label
+    b.use :hint,  wrap_with: { tag: :span, class: :hint }
+    b.use :error, wrap_with: { tag: :span, class: :error }
     b.use :input, class: "form__input", error_class: "form__input--invalid"
   end
 

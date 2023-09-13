@@ -14,11 +14,6 @@ en:
         quantity: 1
         unit_price: $100.00
     labels:
-      user:
-        email: Email
-        password: Password
-        password_confirmation: Confirm Password
-        company_id: Company Name
       quote:
         name: Name
       line_item:
