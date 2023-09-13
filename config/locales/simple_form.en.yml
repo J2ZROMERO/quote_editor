@@ -1,6 +1,11 @@
 en:
   simple_form:
     placeholders:
+      user:
+        email: Enter your email address
+        password: Enter your password
+        password_confirmation: Confirm your password
+        company_id: Enter your company name
       quote:
         name: Name of your quote
       line_item:
@@ -9,6 +14,11 @@ en:
         quantity: 1
         unit_price: $100.00
     labels:
+      user:
+        email: Email
+        password: Password
+        password_confirmation: Confirm Password
+        company_id: Company Name
       quote:
         name: Name
       line_item:
