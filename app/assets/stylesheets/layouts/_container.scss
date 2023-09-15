@@ -57,4 +57,26 @@
         text-align: center;
       }
     }
+
+    &__sign-up{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .sign-up-template{
+    max-width: 50%;
+    min-width: 50%;
+  }
+  
+  .error {
+    width: 100%;
+    color: red;
+    margin-top: 10px;
+  }
+
+  .error_notification {
+    color: red;
+    margin: 3% 0 3% 0;
   }

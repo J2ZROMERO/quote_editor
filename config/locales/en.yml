@@ -35,13 +35,13 @@ en:
         user:
           attributes:
             email:
-              blank: "Email cannot be blank"
+              blank: " cannot be blank"
               taken: "Email is already in use"
             password:
-              blank: "Password cannot be blank"
+              blank: " cannot be blank"
               too_short: "Password is too short (minimum is %{count} characters)"
             password_confirmation:
-              blank: "Password confirmation cannot be blank"
+              blank: " cannot be blank"
               confirmation: "Password confirmation doesn't match Password"
             company_id:
               blank: "Company ID cannot be blank"
