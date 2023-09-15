@@ -1,3 +1,4 @@
+<div class="container__resend-confirmation">
 <h2>Resend confirmation instructions</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
@@ -12,9 +13,10 @@
                 input_html: { autocomplete: "email" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Resend confirmation instructions" %>
+  <div class="form-actions container__resend-confirmation--wraper">
+    <%= f.button :submit, "Click to send" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>

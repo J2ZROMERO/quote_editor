@@ -46,4 +46,15 @@
       }
       
     }
+
+    &__resend-confirmation{
+      margin-top: 10%;
+      h2 {
+        margin-bottom: 10%;
+      }
+      &--wraper{
+        margin: 3% 0 5% 0;
+        text-align: center;
+      }
+    }
   }
