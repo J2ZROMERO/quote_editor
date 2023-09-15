@@ -10,7 +10,9 @@
                 required: true,
                 autofocus: true,
                 value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
-                input_html: { autocomplete: "email" } %>
+                input_html: { autocomplete: "email" },
+                error: false %>
+    <%= f.error :email %>
   </div>
 
   <div class="form-actions container__resend-confirmation--wraper">
