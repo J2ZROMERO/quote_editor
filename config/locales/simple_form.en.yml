@@ -5,7 +5,7 @@ en:
         email: Enter your email address
         password: Enter your password
         password_confirmation: Confirm your password
-        company_id: Enter your company name
+
       quote:
         name: Name of your quote
       line_item:

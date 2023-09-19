@@ -7,6 +7,7 @@ class QuotesController < ApplicationController
     end
 
   def show
+
     @line_item_dates = @quote.line_item_dates.includes(:line_items).ordered
 
   end
@@ -57,7 +58,6 @@ class QuotesController < ApplicationController
   private
 
   def set_quote
-    # We must use current_company.quotes here instead of Quote
     # for security reasons
     @quote = Quote.find(params[:id])
   end
