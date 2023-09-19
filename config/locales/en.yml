@@ -43,5 +43,5 @@ en:
             password_confirmation:
               blank: " cannot be blank"
               confirmation: "Password confirmation doesn't match Password"
-            company_id:
-              blank: "Company ID cannot be blank"
+            
+              
