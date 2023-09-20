@@ -1,7 +1,8 @@
 .line-item-date {
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xxs);
-  
+    
+    gap: 3%;
     &__header {
       display: flex;
       align-items: center;
@@ -44,4 +45,9 @@
         padding: var(--space-m);
       }
     }
+  }
+  
+  .quotes__show {
+    display: flex;
+    align-items: end;
   }
