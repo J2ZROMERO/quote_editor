@@ -5,13 +5,13 @@
 
   <%= f.input :name,
               wrapper_html: { class: "line-item__name" },
-              input_html: { autofocus: true } %>
+              input_html: { autofocus: true }, error: false %>
   <%= f.input :quantity,
-              wrapper_html: { class: "line-item__quantity" } %>
+              wrapper_html: { class: "line-item__quantity" }, error: false %>
   <%= f.input :unit_price,
-              wrapper_html: { class: "line-item__price" } %>
+              wrapper_html: { class: "line-item__price" } , error: false %>
   <%= f.input :description,
-              wrapper_html: { class: "line-item__description" } %>
+              wrapper_html: { class: "line-item__description" } , error: false %>
 
   <div class="line-item__actions">
     <%= link_to "Cancel", quote_path(quote), class: "btn btn--light" %>
