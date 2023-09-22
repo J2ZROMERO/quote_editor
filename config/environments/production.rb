@@ -1,4 +1,39 @@
-require "active_support/core_ext/integer/time"
+
+}
+
+  # Use a real queuing backend for Active Job (and separate queues per environment).
+  # config.active_job.queue_adapter     = :resque
+  # config.active_job.queue_name_prefix = "quote_editor_production"
+
+  config.action_mailer.perform_caching = false
+
+  # Ignore bad email addresses and do not raise email delivery errors.
+  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  # config.action_mailer.raise_delivery_errors = false
+
+  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+  # the I18n.default_locale when a translation cannot be found).
+  config.i18n.fallbacks = true
+
+  # Don't log any deprecations.
+  config.active_support.report_deprecations = false
+
+  # Use default logging formatter so that PID and timestamp are not suppressed.
+  config.log_formatter = ::Logger::Formatter.new
+
+  # Use a different logger for distributed setups.
+  # require "syslog/logger"
+  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
+
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  end
+
+  # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
+endrequire "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -39,25 +74,23 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  # config.active_storage.service = :local
+  config.active_storage.service = :local
 
-  config.action_mailer.default_url_options = { host: 'https://quote-editor-mu2f.onrender.com' }
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'https://quote-editor-mu2f.onrender.com', protocol: 'https' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'https://quote-editor-mu2f.onrender.com',
+    domain:               'gmail.com',
     user_name:            Rails.application.credentials.dig(:gmail, :email),
     password:             Rails.application.credentials.dig(:gmail, :password),
     authentication:       'plain',
     enable_starttls_auto: true,
     open_timeout:         5,
-    read_timeout:         5
-   }
-
-    
+    read_timeout:         5 }
+    config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.default_options = {from: 'no-reply@example.com'}
 
 
   # Mount Action Cable outside main process or domain.
