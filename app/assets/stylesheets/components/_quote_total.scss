@@ -1,13 +1,10 @@
 .quote-total {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
   
     font-size: var(--font-size-xl);
     font-weight: bold;
     background-color: var(--color-white);
     box-shadow: var(--shadow-large);
-  
+    padding: 1%;
     padding-top: var(--space-xs);
     padding-bottom: var(--space-xs);
   

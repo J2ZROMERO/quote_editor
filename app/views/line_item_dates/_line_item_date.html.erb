@@ -30,6 +30,7 @@
       <%= turbo_frame_tag nested_dom_id(line_item_date, "line_items") do %>
         <%= render line_item_date.line_items, quote: quote, line_item_date: line_item_date %>
       <% end %>
+      
       <%= turbo_frame_tag nested_dom_id(line_item_date, LineItem.new) %>
 
       <div class="line-item-date__footer">

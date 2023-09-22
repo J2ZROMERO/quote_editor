@@ -3,10 +3,11 @@ class QuotesController < ApplicationController
 
 
     def index
-      @quotes = current_company.quotes.ordered
+      @quotes = Quote.ordered
     end
 
   def show
+
     @line_item_dates = @quote.line_item_dates.includes(:line_items).ordered
 
   end
@@ -18,7 +19,7 @@ class QuotesController < ApplicationController
   
 
   def create
-    @quote = current_company.quotes.build(quote_params)
+    @quote = Quote.new(quote_params)
   
     if @quote.save
       respond_to do |format|
@@ -57,9 +58,8 @@ class QuotesController < ApplicationController
   private
 
   def set_quote
-    # We must use current_company.quotes here instead of Quote
     # for security reasons
-    @quote = current_company.quotes.find(params[:id])
+    @quote = Quote.find(params[:id])
   end
 
 
