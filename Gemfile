@@ -46,8 +46,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'redis'
-# Use hiredis to get better performance than the "redis" gem
-gem 'hiredis'
 gem "letter_opener", group: :development
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth-google-oauth2'
