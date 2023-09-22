@@ -1,0 +1,33 @@
+.google--container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(77 138 237);
+    margin-top: 5%;
+    .button_to {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.logo-wrapper{
+    background-color: white;
+    margin: 1% 1% 1% 1%;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.google-logo{
+    width: 2rem;
+}
+.google-button{
+    width: 14rem;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:  rgb(77 138 237);
+    border: 0;
+}
