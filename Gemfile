@@ -44,8 +44,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-
-gem 'redis'
 gem "letter_opener", group: :development
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth-google-oauth2'
