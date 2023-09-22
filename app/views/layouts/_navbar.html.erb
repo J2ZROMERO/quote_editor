@@ -3,7 +3,7 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <div class="navbar__brand">
-    <%= current_company ? current_company.name : 'No Company' %>
+    Welcome
 
     </div>
     <div class="navbar__name">
@@ -14,6 +14,7 @@
                   method: :delete,
                   class: "btn btn--dark" %>
   <% else %>
+  <div> Sign in to add your quotes. </div>
     <%= link_to "Sign in",
                 new_user_session_path,
                 class: "btn btn--dark navbar__right" %>

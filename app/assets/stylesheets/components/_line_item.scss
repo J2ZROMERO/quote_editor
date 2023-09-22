@@ -45,6 +45,7 @@
     }
   
     &__quantity {
+      text-align: center;
       flex: 1;
       display: none;
   
@@ -88,7 +89,10 @@
         order: 2;
       }
     }
-  
+    &--form {
+      display: flex;
+      align-items: flex-end;
+    }
     &--header {
       display: none;
       background-color: var(--color-light);
@@ -97,7 +101,6 @@
       @include media(tabletAndUp) {
         display: flex;
       }
-  
       & > * {
         font-size: var(--font-size-s);
         font-weight: bold ;

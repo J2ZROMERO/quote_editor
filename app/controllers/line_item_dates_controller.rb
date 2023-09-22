@@ -56,6 +56,6 @@ class LineItemDatesController < ApplicationController
     end
   
     def set_quote
-      @quote = current_company.quotes.find(params[:quote_id])
+      @quote = Quote.find(params[:quote_id])
     end
   end

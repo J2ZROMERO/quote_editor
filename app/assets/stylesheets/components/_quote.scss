@@ -21,4 +21,8 @@
       align-self: flex-start;
       gap: var(--space-xs);
     }
+    &__create {
+      display: flex;
+      align-items: flex-end;
+    }
   }

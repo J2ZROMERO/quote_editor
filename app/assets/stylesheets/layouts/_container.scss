@@ -1,18 +1,19 @@
 .container {
-    width: 100%;
-    padding-right: var(--space-xs);
-    padding-left: var(--space-xs);
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  min-height: 50vh;
+  padding-right: var(--space-xs);
+  padding-left: var(--space-xs);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
     @include media(tabletAndUp) {
       padding-right: var(--space-m);
       padding-left: var(--space-m);
       max-width: 60rem;
     }
-<<<<<<< Updated upstream
-=======
-
     &__signIn{
       // background-color: red;
       display: flex;
@@ -33,7 +34,7 @@
     }
 
     &__login{
-      margin-top: 10%;
+      margin-top: 5%;
       h2 {
         margin-bottom: 6%;
       }
@@ -67,7 +68,7 @@
         text-align: center;
       }
       min-width: 20%;
-      margin-top: 10%;
+      margin-top: 5%;
       display: flex;
       flex-direction: column;
       .form-inputs{
@@ -110,5 +111,4 @@
   .error_notification {
     color: red;
     margin: 3% 0 3% 0;
->>>>>>> Stashed changes
   }
