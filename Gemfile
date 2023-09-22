@@ -47,14 +47,13 @@ gem "bootsnap", require: false
 
 
 gem "letter_opener", group: :development
-
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth-google-oauth2'
 gem "orm_adapter", " ~> 0.5.0"
 gem "devise", github: "heartcombo/devise", branch: "main"
 gem 'pry-rails', :group => :development
 gem "simple_form", "~> 5.1.0"
-
+gem 'rubyzip', "~> 2.3.0"
 # Use Sass to process CSS
 # gem "sassc-rails"
 
