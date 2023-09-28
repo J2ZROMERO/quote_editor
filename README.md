@@ -1,45 +1,11 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 \[your\_project\_name\] ](#-your_project_name-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Quote Editor ](#-quote-editor-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -61,29 +27,39 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Quote Editor <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+** Quote Editor **  Easily create and manage detailed quotes with the intuitive Quote Editor. Organize projects by adding categories, and within each category, specify dates, item details (title, cost, quantity), and brief descriptions. Simplify your quoting process with our powerful app.
 
-**[your_project__name]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> List the technologies used in this project.
 
 <details>
   <summary>Client</summary>
   <ul>
+    <li><a href="https://hotwired.dev/">Hotwire</a></li>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
+
+  
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://render.com/">Render</a></li>
+  </ul>
+</details>
+
+
+<details>
+  <summary>Services</summary>
+  <ul>
+    <li><a href="https://cloud.google.com/">Google cloud</a></li>
   </ul>
 </details>
 
@@ -100,9 +76,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- ** Sign up with OmniAuth or SMTP service.**
+- ** Create quotes. **
+- ** Add dates and details to the created quotes **
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,9 +86,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- https://quote-editor-mu2f.onrender.com
+> [Live Demo](https://quote-editor-mu2f.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,83 +94,65 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
 In order to run this project you need:
 
-<!--
-Example command:
+> Install a text-editor you prefer. [Code editors](https://www.techradar.com/best/best-text-editors).
 
-```sh
- gem install rails
-```
- -->
+> Install a database management system you prefer. This project uses: postgresql. 
+- [Postgresql](https://www.postgresql.org/) version 15.4
+  > Do not forget to add the user and password to the database.yml file.
+
+> Install ruby. This project uses: ruby 3.2.2
+> [Ruby](https://www.ruby-lang.org/en/downloads/) 
+
+> Install redis. This project uses: redis 7.0.12
+> [Ruby](https://redis.io/) 
+
+> Install rails. This project uses: rails 7.0.8
+> [Ruby on Rails Framework](https://rubyonrails.org/)
+
+> You must have an account on git hub. [Git Hub](https://github.com/)
+
+> You must have installed git in your local environment. [Git](https://git-scm.com/download/win)
+
+> Create the Amniauth google service in  [Google cloud](https://cloud.google.com/).
+> Follow the steps from [Omniauth](https://developers.google.com/identity/protocols/oauth2)
+
+> Create the SMTP service in  [Google cloud](https://cloud.google.com/).
+  
+### Prerequisites
+
+In order to run this project you need all the tools previous mentioneed in the [Getting Started](#getting-started) section.:
 
 ### Setup
 
-Clone this repository to your desired folder:
 
-<!--
-Example commands:
+> If you just want to take a look quickly, make a fork and open the project in the web browser by adding ".dev" instead of ."com" in the repo link.
+- Example : https://github.dev/J2ZROMERO/quote_editor
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+> The " bin/setup " command executed in the root of your project will install all the dependencies and prepare the project for you to run it locally.
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
+> bundle install | bundle i
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
+> bin/dev
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+> bin/rails test:system this will run the system tests.
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
-Example:
-
-```sh
-
-```
- -->
+> [Render](https://render.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,17 +162,11 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **JOSE ZEPEDA**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [J2ZROMERO](https://github.com/J2ZROMERO)
+- Twitter: [@JOSEZEPED4](https://twitter.com/JOSEZEPED4)
+- LinkedIn: [JOSE ZEPEDA](https://www.linkedin.com/in/jose-zromero/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -224,21 +174,20 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+> The next features will be added soon.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] ** The share option for each quote. **
+- [ ] ** Show the most common quotes between users **
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page]([../../issues/](https://github.com/J2ZROMERO/quote_editor/issues)).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -246,9 +195,9 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
+> Do you have any doubts? Do you need support? Reach me out.
+> Contact me if you would like to collaborate in this project or any other project!
 
-If you like this project...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -256,9 +205,9 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
 I would like to thank...
+[SUPER RAILS  youtube chanel](https://www.youtube.com/@SupeRails) for the guide to apply the SMTP and OmniAuth services.
+[HOTRAILS](https://www.hotrails.dev/turbo-rails) for the guide to apply the turbo rails.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -268,13 +217,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- Is this project ready for production?
 
-  - [Answer_1]
+  - Yes, it is.
 
-- **[Question_2]**
+- Can I contribute to this project?
 
-  - [Answer_2]
+  - Yes, you can. Any contributions you make are **greatly appreciated**.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -282,8 +231,6 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT license](https://github.com/J2ZROMERO/quote_editor/blob/dev/MIT.md).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
